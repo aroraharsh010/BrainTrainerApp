@@ -72,8 +72,6 @@
             android:id="@+id/pointsTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignTop="@+id/timerTextView"
             android:layout_marginRight="15dp"
             android:background="@android:color/holo_orange_dark"
             android:backgroundTint="@android:color/holo_orange_dark"
@@ -81,7 +79,9 @@
             android:text="0/0"
             android:textSize="30sp"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_alignBottom="@+id/sumTextView"
+            android:layout_alignEnd="@+id/gridLayout" />
 
         <GridLayout
             android:id="@+id/gridLayout"

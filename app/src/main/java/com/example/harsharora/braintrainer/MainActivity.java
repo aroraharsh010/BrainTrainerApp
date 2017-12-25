@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.text.Layout;
 import android.view.View;
 import android.widget.Button;
+import android.widget.GridLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     TextView points;
     TextView sumTextview;
     TextView timer;
+    GridLayout gridLayout;
     ArrayList<Integer> answers=new ArrayList<Integer>();
     int correctLocation;
     int score=0;
@@ -36,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         points.setText("0/0");
         result.setText("");
         playAgain.setVisibility(View.INVISIBLE);
+        gridLayout.setVisibility(View.VISIBLE);
         generateQues();
 
         new CountDownTimer(30100,1000)
@@ -53,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
             playAgain.setVisibility(View.VISIBLE);
             result.setText("Your Score is "+Integer.toString(score)+"/"+Integer.toString(nQues));
             timer.setText("0s");
+            gridLayout.setVisibility(View.INVISIBLE);
 
         }
     }.start();
@@ -135,6 +139,7 @@ public class MainActivity extends AppCompatActivity {
          timer=(TextView)findViewById(R.id.timerTextView);
         playAgain=(Button)findViewById(R.id.playAgainButton);
         relLayout=(RelativeLayout)findViewById(R.id.relLayout);
+        gridLayout=(GridLayout)findViewById(R.id.gridLayout);
 
 
 
